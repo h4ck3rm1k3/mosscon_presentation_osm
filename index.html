@@ -1,438 +1,349 @@
 <!doctype html>
-
-<!--
-
-    Welcome to the light side of the source, young padawan.
-
-    One step closer to learn something interesting you are...
-
-                               ____                  
-                            _.' :  `._               
-                        .-.'`.  ;   .'`.-.           
-               __      / : ___\ ;  /___ ; \      __  
-             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
-             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
-                  `:-.._J '-.-'L__ `-.-' L_..-;'     
-                    "-.__ ;  .-"  "-.  : __.-"       
-                        L ' /.======.\ ' J           
-                         "-.   "__"   .-"            
-                        __.l"-:_JL_;-";.__           
-                     .-j/'.;  ;""""  / .'\"-.        
-                   .' /:`. "-.:     .-" .';  `.      
-                .-"  / ;  "-. "-..-" .-"  :    "-.   
-             .+"-.  : :      "-.__.-"      ;-._   \  
-             ; \  `.; ;                    : : "+. ; 
-             :  ;   ; ;                    : ;  : \: 
-             ;  :   ; :                    ;:   ;  : 
-            : \  ;  :  ;                  : ;  /  :: 
-            ;  ; :   ; :                  ;   :   ;: 
-            :  :  ;  :  ;                : :  ;  : ; 
-            ;\    :   ; :                ; ;     ; ; 
-            : `."-;   :  ;              :  ;    /  ; 
-             ;    -:   ; :              ;  : .-"   : 
-             :\     \  :  ;            : \.-"      : 
-              ;`.    \  ; :            ;.'_..-=  / ; 
-              :  "-.  "-:  ;          :/."      .'  :
-               \         \ :          ;/  __        :
-                \       .-`.\        /t-""  ":-+.   :
-                 `.  .-"    `l    __/ /`. :  ; ; \  ;
-                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
-                    \ / .-"   /.     .'.' ;_:'    ;  
-                     :-""-.`./-.'     /    `.___.'   
-                           \ `t  ._  /               
-                            "-.t-._:'                
-
--->
-
-<!--
-    
-    So you'd like to know how to use impress.js?
-    
-    You've made the first, very important step - you're reading the source code.
-    And that's how impress.js presentations are built - with HTML and CSS code.
-    
-    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
-    And what is even more important, you need to be a designer, too, because there are no default
-    styles for impress.js presentations, there is no default or automatic layout for them.
-    
-    You need to design and build it by hand.
-    
-    So...
-    
-    Would you still like to know how to use impress.js?
-    
--->
-
-<html lang="en">
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
-    <link href="css/impress-demo.css" rel="stylesheet" />
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <title>Mosscon presentation osm</title>
+  <meta name="description" content="mosscon_presentation_osm">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
 </head>
 
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
-<body class="impress-not-supported">
+<body>
 
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Mosscon presentation osm</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">mosscon_presentation_osm</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm" class="code">View Mosscon presentation osm on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1></h1>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    You probably won't need it now, but there are some configuration options that can be set on this element.
-    
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
-    right around the corner of this tag ;)
-    
--->
-<div id="impress">
+<h1>mosscon_presentation_osm</h1>
 
-    <!--
-        
-        Here is where interesting thing start to happen.
-        
-        Each step of the presentation should be an element inside the `#impress` with a class name
-        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
-        the 'camera' shows them on each step of the presentation.
-        
-        Positioning information is passed through data attributes.
-        
-        In the example below we only specify x and y position of the step element with `data-x="-1000"`
-        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
-        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
-        
-        It will not be rotated or scaled.
-        
-    -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+<p>mosscon_presentation_osm</p>
+
+<p>based on impress.js</p>
+
+<p>It's a presentation framework based on the power of CSS3 transforms and 
+transitions in modern browsers and inspired by the idea behind prezi.com.</p>
+
+<p><strong>WARNING</strong></p>
+
+<p>impress.js may not help you if you have nothing interesting to say ;)</p>
+
+<h2>HOW TO USE IT</h2>
+
+<p><a href="http://github.com/bartaz/impress.js/blob/master/index.html">Use the source</a>, Luke ;)</p>
+
+<p>If you have no idea what I mean by that, or you just clicked that link above and got 
+very confused by all these strange characters that got displayed on your screen,
+it's a sign, that impress.js is not for you.</p>
+
+<p>Sorry.</p>
+
+<p>Fortunately there are some guys on GitHub that got quite excited with the idea of building
+editing tool for impress.js. Let's hope they will manage to do it.</p>
+
+<h2>EXAMPLES AND OTHER LEARNING RESOURCES</h2>
+
+<h3>Official demo</h3>
+
+<p><a href="http://bartaz.github.com/impress.js">impress.js demo</a> by <a href="http://twitter.com/bartaz">@bartaz</a></p>
+
+<h3>Examples and demos</h3>
+
+<p>More examples and demos can be found on <a href="http://github.com/bartaz/impress.js/wiki/Examples-and-demos">Examples and demos wiki page</a>.</p>
+
+<p>Feel free to add your own example presentations (or websites) there.</p>
+
+<h3>Other tutorials and learning resources</h3>
+
+<p>If you want to learn even more there is a <a href="https://github.com/bartaz/impress.js/wiki/impress.js-tutorials-and-other-learning-resources">list of tutorials and other learning resources</a>
+on the wiki, too.</p>
+
+<p>These is also a book available about <a href="http://www.packtpub.com/building-impressive-presentations-with-impressjs/book">Building impressive presentations with impress.js</a> by Rakhitha Nimesh Ratnayake.</p>
+
+<h2>WANT TO CONTRIBUTE?</h2>
+
+<p>If you've found a bug or have a great idea for new feature let me know by <a href="http://github.com/bartaz/impress.js/issues/new">adding your suggestion</a> to <a href="https://github.com/bartaz/impress.js/issues">issues list</a>.</p>
+
+<p>If you have fixed a bug or implemented a feature that you'd like to share, send your pull request against <a href="http://github.com/bartaz/impress.js/tree/dev">dev branch</a>. But remember that I only accept code that fits my vision of impress.js
+and my coding standards - so make sure you are open for discussion :)</p>
+
+<h2>ABOUT THE NAME</h2>
+
+<p>impress.js name in <a href="http://twitter.com/skuzniak/status/143627215165333504">courtesy of @skuzniak</a>.</p>
+
+<p>It's an (un)fortunate coincidence that a Open/LibreOffice presentation tool is called Impress ;)</p>
+
+<h2>VERSION HISTORY</h2>
+
+<h3>0.5.3 (<a href="http://github.com/bartaz/impress.js/tree/0.5.3">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5.3">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5.3">tar</a>)</h3>
+
+<h4>BUGFIX RELEASE</h4>
+
+<p>Version 0.5 introduced events including <code>impress:stepenter</code>, but this event was not triggered properly in some
+specific transition types (for example when only scale was changing between steps). It was caused by the fact that
+in such cases expected <code>transitionend</code> event was not triggered.</p>
+
+<p>This version fixes this issue. Unfortunately modern <code>transitionend</code> event is no longer used to detect when the
+transition has finished, but old school (and more reliable) <code>setTimeout</code> is used.</p>
+
+<h3>0.5.2 (<a href="http://github.com/bartaz/impress.js/tree/0.5.2">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5.2">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5.2">tar</a>)</h3>
+
+<h4>DOCUMENTATION RELEASE</h4>
+
+<p>More descriptive comments added to demo CSS and impress.js source file, so now not only <code>index.html</code> is worth reading ;)</p>
+
+<h3>0.5.1 (<a href="http://github.com/bartaz/impress.js/tree/0.5.1">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5.1">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5.1">tar</a>)</h3>
+
+<h4>BUGFIX RELEASE</h4>
+
+<p>Changes in version 0.5 introduced a bug (#126) that was preventing clicks on links (or any clickable elements) on
+currently active step. This release fixes this issue.</p>
+
+<h3>0.5 (<a href="http://github.com/bartaz/impress.js/tree/0.5">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5">tar</a>)</h3>
+
+<h4>CHANGELOG</h4>
+
+<ul>
+<li>API changed, so that <code>impress()</code> function no longer automatically initialize presentation; new method called <code>init</code>
+was added to API and it should be used to start the presentation</li>
+<li>event <code>impress:init</code> is triggered on root presentation element (<code>#impress</code> by default) when presentation is initialized</li>
+<li>new CSS classes were added: <code>impress-disabled</code> is added to body element by the impress.js script and it's changed to 
+<code>impress-enabled</code> when <code>init()</code> function is called</li>
+<li>events added when step is entered and left - custom <code>impress:stepenter</code> and <code>impress:stepleave</code> events are triggered
+on step elements and can be handled like any other DOM events (with <code>addEventListener</code>)</li>
+<li>additional <code>past</code>, <code>present</code> and <code>future</code> classes are added to step elements
+
+<ul>
+<li>
+<code>future</code> class appears on steps that were not yet visited</li>
+<li>
+<code>present</code> class appears on currently visible step - it's different from <code>active</code> class as <code>present</code> class
+is added when transition finishes (step is entered)</li>
+<li>
+<code>past</code> class is added to already visited steps (when the step is left)</li>
+</ul>
+</li>
+<li>and good news, <code>goto()</code> API method is back! it seems that <code>goto</code> <strong>was</strong> a future reserved word but isn't anymore,
+so we can use this short and pretty name instead of camelCassy <code>stepTo</code> - and yes, that means API changed again...</li>
+<li>additionally <code>goto()</code> method now supports new types of parameters:
+
+<ul>
+<li>you can give it a number of step you want to go to: <code>impress().goto(7)</code>
+</li>
+<li>or its id: <code>impress().goto("the-best-slide-ever")</code>
+</li>
+<li>of course DOM element is still acceptable: <code>impress().goto( document.getElementById("overview") )</code>
+</li>
+</ul>
+</li>
+<li>and if it's not enough, <code>goto()</code> also accepts second parameter to define the transition duration in ms, for example
+<code>impress().goto("make-it-quick", 300)</code> or <code>impress().goto("now", 0)</code>
+</li>
+</ul><h4>UPGRADING FROM PREVIOUS VERSIONS</h4>
+
+<p>In current version calling <code>impress()</code> doesn't automatically initialize the presentation. You need to call <code>init()</code>
+function from the API. So in a place were you called <code>impress()</code> to initialize impress.js simply change this call
+to <code>impress().init()</code>.</p>
+
+<p>Version 0.4 changed <code>goto</code> API method into <code>stepTo</code>. It turned out that <code>goto</code> is not a reserved word anymore, so it
+can be used in JavaScript. That's why version 0.5 brings it back and removes <code>stepTo</code>.</p>
+
+<p>So if you have been using version 0.4 and have any reference to <code>stepTo</code> API method make sure to change it to <code>goto</code>.</p>
+
+<h3>0.4.1 (<a href="http://github.com/bartaz/impress.js/tree/0.4.1">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.4.1">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.4.1">tar</a>)</h3>
+
+<h4>BUGFIX RELEASE</h4>
+
+<p>Changes is version 0.4 introduced a bug causing JavaScript errors being thrown all over the place in fallback mode.
+This release fixes this issue.</p>
+
+<p>It also adds a flag <code>impress.supported</code> that can be used in JavaScript to check if impress.js is supported in the browser.</p>
+
+<h3>0.4 (<a href="http://github.com/bartaz/impress.js/tree/0.4">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.4">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.4">tar</a>)</h3>
+
+<h4>CHANGELOG</h4>
+
+<ul>
+<li>configuration options on <code>#impress</code> element: <code>data-perspective</code> (in px, defaults so 1000),
+<code>data-transition-duration</code> (in ms, defaults to 1000)</li>
+<li>automatic scaling to fit window size, with configuration options:  <code>data-width</code> (in px, defaults to 1024),
+<code>data-height</code> (in px, defaults to 768), <code>max-scale</code> (defaults to 1), <code>min-scale</code> (defaults to 0)</li>
+<li>
+<code>goto</code> API function was renamed to <code>stepTo</code> because <code>goto</code> is a future reserved work in JavaScript,
+so <strong>please make sure to update your code</strong>
+</li>
+<li>fallback <code>impress-not-supported</code> class is now set on <code>body</code> element instead of <code>#impress</code> element and it's
+replaced with <code>impress-supported</code> when browser supports all required features</li>
+<li>classes <code>step-ID</code> used to indicate progress of the presentation are now renamed to <code>impress-on-ID</code> and are
+set on <code>body</code> element, so <strong>please make sure to update your code</strong>
+</li>
+<li>basic validation of configuration options</li>
+<li>couple of typos and bugs fixed</li>
+<li>favicon added ;)</li>
+</ul><h4>UPGRADING FROM PREVIOUS VERSIONS</h4>
+
+<p>If in your custom JavaScript code you were using <code>goto()</code> function from impress.js API make sure to change it
+to <code>stepTo()</code>.</p>
+
+<p>If in your CSS you were using classes based on currently active step with <code>step-</code> prefix, such as <code>step-bored</code>
+(where <code>bored</code> is the id of the step element) make sure to change it to <code>impress-on-</code> prefix
+(for example <code>impress-on-bored</code>). Also in previous versions these classes were assigned to <code>#impress</code> element
+and now they are added to <code>body</code> element, so if your CSS code depends on this, it also should be updated.</p>
+
+<p>Same happened to <code>impress-not-supported</code> class name - it was moved from <code>#impress</code> element to <code>body</code>, so update
+your CSS if it's needed.</p>
+
+<h4>NOTE ON BLACKBERRY PLAYBOOK</h4>
+
+<p>Changes and fixes added in this version have broken the experience on Blackberry Playbook with OS in version 1.0.
+It happened due to a bug in the Playbook browser in this version. Fortunately in version 2.0 of Playbook OS this
+bug was fixed and impress.js works fine.</p>
+
+<p>So currently impress.js work only on Blackberry Playbook with latest OS. Fortunately, <a href="http://twitter.com/n_adam_stanley/status/178188611827679233">it seems that most of the
+users</a> <a href="http://twitter.com/brcewane/status/178230406196379648">are quite quick with updating their devices</a></p>
+
+<h3>0.3 (<a href="http://github.com/bartaz/impress.js/tree/0.3">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.3">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.3">tar</a>)</h3>
+
+<h4>CHANGELOG</h4>
+
+<ul>
+<li>minor CSS 3D fixes</li>
+<li>basic API to control the presentation flow from JavaScript</li>
+<li>touch event support</li>
+<li>basic support for iPad (iOS 5 and iOS 4 with polyfills) and Blackberry Playbook</li>
+</ul><h4>UPGRADING FROM PREVIOUS VERSIONS</h4>
+
+<p>Because API was introduced the way impress.js script is initialized was changed a bit. You not only has to include
+<code>impress.js</code> script file, but also call <code>impress()</code> function.</p>
+
+<p>See the source of <code>index.html</code> for example and more details.</p>
+
+<h3>0.2 (<a href="http://github.com/bartaz/impress.js/tree/0.2">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.2">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.2">tar</a>)</h3>
+
+<ul>
+<li>tutorial/documentation added to <code>index.html</code> source file</li>
+<li>being even more strict with strict mode</li>
+<li>code clean-up</li>
+<li>couple of small bug-fixes</li>
+</ul><h3>0.1 (<a href="http://github.com/bartaz/impress.js/tree/0.1">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.1">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.1">tar</a>)</h3>
+
+<p>First release.</p>
+
+<p>Contains basic functionality for step placement and transitions between them
+with simple fallback for non-supporting browsers.</p>
+
+<h2>BROWSER SUPPORT</h2>
+
+<h3>TL;DR;</h3>
+
+<p>Currently impress.js works fine in latest Chrome/Chromium browser, Safari 5.1 and Firefox 10.
+With addition of some HTML5 polyfills (see below for details) it should work in Internet Explorer 10
+(currently available as Developers Preview).
+It doesn't work in Opera, as it doesn't support CSS 3D transforms.</p>
+
+<p>As a presentation tool it was not developed with mobile browsers in mind, but some tablets are good
+enough to run it, so it should work quite well on iPad (iOS 5, or iOS 4 with HTML5 polyfills) and 
+Blackberry Playbook.</p>
+
+<h3>Still interested? Read more...</h3>
+
+<p>Additionally for the animations to run smoothly it's required to have hardware
+acceleration support in your browser. This depends on the browser, your operating
+system and even kind of graphic hardware you have in your machine.</p>
+
+<p>For browsers not supporting CSS3 3D transforms impress.js adds <code>impress-not-supported</code>
+class on <code>#impress</code> element, so fallback styles can be applied to make all the content accessible.</p>
+
+<h3>Even more explanation and technical stuff</h3>
+
+<p>Let's put this straight -- wide browser support was (and is) not on top of my priority list for
+impress.js. It's built on top of fresh technologies that just start to appear in the browsers
+and I'd like to rather look forward and develop for the future than being slowed down by the past.</p>
+
+<p>But it's not "hard-coded" for any particular browser or engine. If any browser in future will
+support features required to run impress.js, it will just begin to work there without changes in
+the code.</p>
+
+<p>From technical point of view all the positioning of presentation elements in 3D requires CSS 3D
+transforms support. Transitions between presentation steps are based on CSS transitions.
+So these two features are required by impress.js to display presentation correctly.</p>
+
+<p>Unfortunately the support for CSS 3D transforms and transitions is not enough for animations to
+run smoothly. If the browser doesn't support hardware acceleration or the graphic card is not 
+good enough the transitions will be laggy.</p>
+
+<p>Additionally the code of impress.js relies on APIs proposed in HTML5 specification, including
+<code>classList</code> and <code>dataset</code> APIs. If they are not available in the browser, impress.js will not work.</p>
+
+<p>Fortunately, as these are JavaScript APIs there are polyfill libraries that patch older browsers
+with these APIs.</p>
+
+<p>For example IE10 is said to support CSS 3D transforms and transitions, but it doesn't have <code>classList</code>
+nor <code>dataset</code> APIs implemented at the moment. So including polyfill libraries <em>should</em> help IE10
+with running impress.js.</p>
+
+<h3>And few more details about mobile support</h3>
+
+<p>Mobile browsers are currently not supported. Even Android browsers that support CSS 3D transforms are
+forced into fallback view at this point.</p>
+
+<p>Fortunately some tablets seem to have good enough hardware support and browsers to handle it.
+Currently impress.js presentations should work on iPad and Blackberry Playbook.</p>
+
+<p>In theory iPhone should also be able to run it (as it runs the same software as iPad), but I haven't
+found a good way to handle its small screen.</p>
+
+<p>Also note that iOS supports <code>classList</code> and <code>dataset</code> APIs starting with version 5, so iOS 4.X and older
+requires polyfills to work.</p>
+
+<h2>LICENSE</h2>
+
+<p>Copyright 2011-2012 Bartek Szopka</p>
+
+<p>Released under the MIT and GPL (version 2 or later) Licenses.</p>
+        </article>
+      </div>
     </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/h4ck3rm1k3" class="avatar"><img src="https://secure.gravatar.com/avatar/cff24874f9655be6b8a602420a4f4384?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/h4ck3rm1k3">h4ck3rm1k3</a> maintains <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm">Mosscon presentation osm</a></p>
 
-    <!--
-        
-        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
-        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
-        
-        So in the example below it'll be `step-2`.
-        
-        The hash part of the url when this step is active will be `#/step-2`.
-        
-        You can also use `#step-2` in a link, to point directly to this particular step.
-        
-        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
-        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
-        
-    -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
-    </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm/tarball/master" class="tar">tar</a><a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
 
-    <!--
-        
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to it's correct size.
-        
-    -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
-
-    <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
-
-    <!--
-        
-        And now it gets really exciting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
-
-    <!--
-        
-        This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
-        
-        And the last one shows full power and flexibility of impress.js.
-        
-        You can not only position element in 3D, but also rotate it around any axis.
-        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
-        10 degrees (clockwise) around Y axis.
-        
-        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
-        as `data-rotate` (these two are basically aliases).
-        
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
-
-    <!--
-        
-        So to make a summary of all the possible attributes used to position presentation steps, we have:
-        
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
-        
-        These values are used by impress.js in CSS transformation functions, so for more information consult
-        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-        
-    -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
-
-</div>
-
-<!--
-    
-    Hint is not related to impress.js in any way.
-    
-    But it can show you how to use impress.js features in creative way.
-    
-    When the presentation step is shown (selected) its element gets the class of "active" and the body element
-    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
-    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
-    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
-    
-    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
-    the first step of presentation is visible for a couple of seconds.
-    
-    ...
-    
-    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
-    It's just a quick and dirty workaround to get different hint text for touch devices.
-    In a real world it should be at least placed in separate JS file ... and the touch content should be
-    probably just hidden somewhere in HTML - not hard-coded in the script.
-    
-    Just sayin' ;)
-    
--->
-<div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</p>
-</div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
-
-<!--
-    
-    Last, but not least.
-    
-    To make all described above really work, you need to include impress.js in the page.
-    I strongly encourage to minify it first.
-    
-    In here I just include full source of the script to make it more readable.
-    
-    You also need to call a `impress().init()` function to initialize impress.js presentation.
-    And you should do it in the end of your document. Not only because it's a good practice, but also
-    because it should be done when the whole document is ready.
-    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
-    
--->
-<script src="js/impress.js"></script>
-<script>impress().init();</script>
-
-<!--
-    
-    The `impress()` function also gives you access to the API that controls the presentation.
-    
-    Just store the result of the call:
-    
-        var api = impress();
-    
-    and you will get three functions you can call:
-    
-        `api.init()` - initializes the presentation,
-        `api.next()` - moves to next step of the presentation,
-        `api.prev()` - moves to previous step of the presentation,
-        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
-                id or the DOM element; second parameter can be used to define duration of the transition in ms,
-                but it's optional - if not provided default transition duration for the presentation will be used.
-    
-    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
-    Don't worry, it wont initialize the presentation again.
-    
-    For some example uses of this API check the last part of the source of impress.js where the API
-    is used in event handlers.
-    
--->
-
+  
 </body>
 </html>
-
-<!--
-    
-    Now you know more or less everything you need to build your first impress.js presentation, but before
-    you start...
-    
-    Oh, you've already cloned the code from GitHub?
-    
-    You have it open in text editor?
-    
-    Stop right there!
-    
-    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
-    first needs to grow in your mind.
-    
-    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
-    
-    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
-    to present. It will get you closer and closer to the layout you'll build later with impress.js.
-    
-    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
-    it earlier, because you'll only waste your time fighting with positioning of useless points.
-    
-    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
-    creating awesome and engaging presentations.
-    
-    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
-    
--->
-
-<!--
-    
-    Are you still reading this?
-    
-    For real?
-    
-    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
-    to congratulate you personally :)
-    
-    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
-    or anything you like to drink. And raise a glass for me ;)
-    
-    Cheers!
-    
--->
-
