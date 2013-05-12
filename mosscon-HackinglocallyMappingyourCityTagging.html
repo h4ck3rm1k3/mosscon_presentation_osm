@@ -1,0 +1,110 @@
+<!doctype html>
+
+<!--
+
+    Welcome to my presentation source code
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>MOSSCON Midwest Open Source Software Conference | Hacking Locally : Mapping your City| by Mike DuPont @h4ck3rm1k3</title>   
+    <meta name="description" content="Presentation for mosscon on mapping tools" />
+    <meta name="author" content="James Michael DuPont" />
+   <!--
+       <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+-->
+   <link href="css/gogglestyle.css" rel="stylesheet" />
+
+    <!--
+        lets use a standard style for now        
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id=tagging  class="step " data-x="-100" data-y="0" data-rotate=0 data-scale=5 > <!-- center -->
+      Tagging tips
+    </div>
+   
+    <div id=footways  style="background-color: purple;" class="step imageslide2" data-x="-100" data-y="0" data-rotate=0 > <!-- leaf 1 -->
+      1. add footways
+      <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway">highway=footway</a>
+      <a href="http://www.openstreetmap.org/browse/way/221067662">example</a>
+    </div>
+    <div id=alley  style="background-color: blue;"  class="step imageslide2"  data-x="-500" data-y="1000" data-rotate=45>  <!-- leaf 2 -->
+      2. Add alleys if missing.
+      <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dservice">highway=service</a>
+      <a href="http://wiki.openstreetmap.org/wiki/Tag:service%3Dalley">service=alley</a>
+    </div>
+
+    <div id=Roundabout style="background-color: cyan;" class="step imageslide2" data-x="-1500" data-y="1500" data-rotate=90> <!-- leaf 3 -->
+      3. add roundabouts
+      <a href=http://www.openstreetmap.org/browse/node/164737468>Mini Roundabout</a>
+      <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dmini_roundabout">highway=mini_roundabout</a>
+    </div>
+
+    <div id=Turning Circle  style="background-color: green;" class="step imageslide2" data-x="-2500" data-y="1000" data-rotate=135>  <!-- leaf 4 , apart from 2-->
+      4. add turning circles
+      <a href=http://www.openstreetmap.org/browse/node/165199109>Turning Circle></a>
+      <a href="http://wiki.openstreetmap.org/wiki/Tag:highway%3Dturning_circle">highway=turning_circle</a>
+    </div>
+
+    <div id=contact  style="background-color: yellow;" class="step imageslide2"  data-x="-3000" data-y="0" data-rotate=180><!-- leaf 5 against 1-->
+      5. Add contacts
+      <a href="http://wiki.openstreetmap.org/wiki/Key:website">website</a>
+      <a href="http://wiki.openstreetmap.org/wiki/Key:facebook">facebook</a>
+      <a href="http://wiki.openstreetmap.org/wiki/Key:contact">contact:phone and others</a>
+    </div>
+
+    <div id=churches  class="step imageslide2" style="background-color: orange;" data-x="-2500" data-y="-1000" data-rotate=225> <!-- leaf 6 above 5, opposite of 4-->
+      6. tag imported churches, they are important centers for the community
+      tag the location of the churches, many are imported and wrong. Add the buildings and merge the imported tags.
+      <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dplace_of_worship">amenity=place_of_worship</a>
+      add religion=christian etc.
+      <a href=http://wiki.openstreetmap.org/wiki/Denomination>denomination=catholic etc.</a>
+    </div>
+
+    <div id=Schools style="background-color: red;"  class="step imageslide2"  data-x="-1500" data-y="-1400" data-rotate=270>  <!-- leaf 7 -->
+      7. tag schools, another community center.
+    </div>
+
+    <div id=Misnamed streets   style="background-color: magenta;"  class="step imageslide2"  data-x="-500" data-y="-1000"  data-rotate=315>  <!-- leaf 8 above 2-->
+      8. Check for streets with the wrong names
+    </div>
+
+    <div id="overview" class="step" data-x="-4000" data-y="500" data-scale="11">    </div>
+
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+
