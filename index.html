@@ -19,6 +19,57 @@
 </head>
 
 <body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Mosscon presentation osm</h1>
+    </header>
+    <h1>Presentation</h1>
+      <a href="mosscon-HackinglocallyMappingyourCity.html">The presentation</a>
+    <div id="container">
+      <p class="tagline">mosscon_presentation_osm</p>
+
+
+
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/h4ck3rm1k3/mosscon_presentation_osm" class="code">View Mosscon presentation osm on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1></h1>
+
+<h1>mosscon_presentation_osm</h1>
+
+<p>mosscon_presentation_osm</p>
+
+<p>based on impress.js</p>
+
+<p>It's a presentation framework based on the power of CSS3 transforms and 
+transitions in modern browsers and inspired by the idea behind prezi.com.</p>
+
+<p><strong>WARNING</strong></p>
+
+<p>impress.js may not help you if you have nothing interesting to say ;)</p>
+
+<h2>HOW TO USE IT</h2>
+
+<p><a href="http://github.com/bartaz/impress.js/blob/master/index.html">Use the source</a>, Luke ;)</p>
+
+<p>If you have no idea what I mean by that, or you just clicked that link above and got 
+very confused by all these strange characters that got displayed on your screen,
+it's a sign, that impress.js is not for you.</p>
+
+<p>Sorry.</p>
+
+<p>Fortunately there are some guys on GitHub that got quite excited with the idea of building
+editing tool for impress.js. Let's hope they will manage to do it.</p>
+
+
   <div class="wrapper">
     <header>
       <h1 class="title">Mosscon presentation osm</h1>
@@ -140,6 +191,71 @@ was added to API and it should be used to start the presentation</li>
 on step elements and can be handled like any other DOM events (with <code>addEventListener</code>)</li>
 <li>additional <code>past</code>, <code>present</code> and <code>future</code> classes are added to step elements
 
+<p>More examples and demos can be found on <a href="http://github.com/bartaz/impress.js/wiki/Examples-and-demos">Examples and demos wiki page</a>.</p>
+
+<p>Feel free to add your own example presentations (or websites) there.</p>
+
+<h3>Other tutorials and learning resources</h3>
+
+<p>If you want to learn even more there is a <a href="https://github.com/bartaz/impress.js/wiki/impress.js-tutorials-and-other-learning-resources">list of tutorials and other learning resources</a>
+on the wiki, too.</p>
+
+<p>These is also a book available about <a href="http://www.packtpub.com/building-impressive-presentations-with-impressjs/book">Building impressive presentations with impress.js</a> by Rakhitha Nimesh Ratnayake.</p>
+
+<h2>WANT TO CONTRIBUTE?</h2>
+
+<p>If you've found a bug or have a great idea for new feature let me know by <a href="http://github.com/bartaz/impress.js/issues/new">adding your suggestion</a> to <a href="https://github.com/bartaz/impress.js/issues">issues list</a>.</p>
+
+<p>If you have fixed a bug or implemented a feature that you'd like to share, send your pull request against <a href="http://github.com/bartaz/impress.js/tree/dev">dev branch</a>. But remember that I only accept code that fits my vision of impress.js
+and my coding standards - so make sure you are open for discussion :)</p>
+
+<h2>ABOUT THE NAME</h2>
+
+<p>impress.js name in <a href="http://twitter.com/skuzniak/status/143627215165333504">courtesy of @skuzniak</a>.</p>
+
+<p>It's an (un)fortunate coincidence that a Open/LibreOffice presentation tool is called Impress ;)</p>
+
+<h2>VERSION HISTORY</h2>
+
+<h3>0.5.3 (<a href="http://github.com/bartaz/impress.js/tree/0.5.3">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5.3">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5.3">tar</a>)</h3>
+
+<h4>BUGFIX RELEASE</h4>
+
+<p>Version 0.5 introduced events including <code>impress:stepenter</code>, but this event was not triggered properly in some
+specific transition types (for example when only scale was changing between steps). It was caused by the fact that
+in such cases expected <code>transitionend</code> event was not triggered.</p>
+
+<p>This version fixes this issue. Unfortunately modern <code>transitionend</code> event is no longer used to detect when the
+transition has finished, but old school (and more reliable) <code>setTimeout</code> is used.</p>
+
+<h3>0.5.2 (<a href="http://github.com/bartaz/impress.js/tree/0.5.2">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5.2">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5.2">tar</a>)</h3>
+
+<h4>DOCUMENTATION RELEASE</h4>
+
+<p>More descriptive comments added to demo CSS and impress.js source file, so now not only <code>index.html</code> is worth reading ;)</p>
+
+<h3>0.5.1 (<a href="http://github.com/bartaz/impress.js/tree/0.5.1">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5.1">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5.1">tar</a>)</h3>
+
+<h4>BUGFIX RELEASE</h4>
+
+<p>Changes in version 0.5 introduced a bug (#126) that was preventing clicks on links (or any clickable elements) on
+currently active step. This release fixes this issue.</p>
+
+<h3>0.5 (<a href="http://github.com/bartaz/impress.js/tree/0.5">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.5">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.5">tar</a>)</h3>
+
+<h4>CHANGELOG</h4>
+
+<ul>
+<li>API changed, so that <code>impress()</code> function no longer automatically initialize presentation; new method called <code>init</code>
+was added to API and it should be used to start the presentation</li>
+<li>event <code>impress:init</code> is triggered on root presentation element (<code>#impress</code> by default) when presentation is initialized</li>
+<li>new CSS classes were added: <code>impress-disabled</code> is added to body element by the impress.js script and it's changed to 
+<code>impress-enabled</code> when <code>init()</code> function is called</li>
+<li>events added when step is entered and left - custom <code>impress:stepenter</code> and <code>impress:stepleave</code> events are triggered
+on step elements and can be handled like any other DOM events (with <code>addEventListener</code>)</li>
+<li>additional <code>past</code>, <code>present</code> and <code>future</code> classes are added to step elements
+
+>>>>>>> master
 <ul>
 <li>
 <code>future</code> class appears on steps that were not yet visited</li>
@@ -279,13 +395,12 @@ users</a> <a href="http://twitter.com/brcewane/status/178230406196379648">are qu
 </ul><h3>0.1 (<a href="http://github.com/bartaz/impress.js/tree/0.1">browse</a>, <a href="http://github.com/bartaz/impress.js/zipball/0.1">zip</a>, <a href="http://github.com/bartaz/impress.js/tarball/0.1">tar</a>)</h3>
 
 <p>First release.</p>
+<<<<<<< HEAD
 
 <p>Contains basic functionality for step placement and transitions between them
 with simple fallback for non-supporting browsers.</p>
 
 <h2>BROWSER SUPPORT</h2>
-
-<h3>TL;DR;</h3>
 
 <p>Currently impress.js works fine in latest Chrome/Chromium browser, Safari 5.1 and Firefox 10.
 With addition of some HTML5 polyfills (see below for details) it should work in Internet Explorer 10
